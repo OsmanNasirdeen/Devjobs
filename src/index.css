@@ -1,0 +1,42 @@
+:root {
+  --violet: #5964e0;
+  --light-violet: #939bf4;
+  --midnight: #121721;
+  --very-dark-blue: #19202d;
+  --light-grey: #f4f6f8;
+  --gray: #9daec2;
+  --white: #ffffff;
+  --dark-grey: #6e8098;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fs-20: 20px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+.card {
+  position: absolute;
+  width: 350px;
+  height: 253px;
+  background: var(--white);
+  border-radius: 6px;
+}
+.company-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 32px;
+  top: 0px;
+}
+.company-location {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-14);
+  line-height: 17.36px;
+  height: 17px;
+  width: fit-content;
+  left: 32px;
+  top: 203px;
+  color: var(--violet);
+}

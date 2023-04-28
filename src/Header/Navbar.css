@@ -1,0 +1,8 @@
+.Navbar-header {
+  position: absolute;
+  width: 1440px;
+  height: 162px;
+  left: 0px;
+  top: -1px;
+  background-image: url("../../assets/desktop/bg-pattern-header.svg");
+}
