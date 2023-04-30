@@ -22,6 +22,43 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
+.button-violet {
+  font-family: var(--font-family);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-16);
+  background: var(--violet);
+  color: var(--white);
+  border: 1px solid var(--violet);
+  line-height: 19.84px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 48px;
+  width: 141px;
+}
+.button-violet:hover {
+  background: var(--light-violet);
+  border: 1px solid var(--light-violet);
+}
+
+/* button 2 styles */
+.button-light-grey {
+  font-family: var(--font-family);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-16);
+  background: var(--light-grey);
+  color: var(--violet);
+  border: 1px solid var(--light-grey);
+  line-height: 19.84px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 48px;
+  width: 141px;
+}
+
+.button-light-grey:hover {
+  background: var(--gray);
+  border: 1px solid var(--gray);
+}
 
 .card {
   position: absolute;

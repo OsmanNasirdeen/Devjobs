@@ -195,25 +195,11 @@
 
   .filter-button {
     position: absolute;
-    width: 123px;
-    height: 48px;
-    left: 960px;
+    /* width: fit-content; */
+    /* height: auto; */
+    left: 950px;
   }
   .filter-button > button {
-    width: 100%;
-    height: 100%;
-    font-family: var(--font-family);
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-16);
-    color: var(--white);
-    background: var(--violet);
-    border: 1px solid var(--violet);
-    border-radius: 5px;
-    padding: 16px 40px 16px 33px;
-    cursor: pointer;
-  }
-  .filter-button > button:hover {
-    background: var(--light-violet);
-    border: 1px solid var(--light-violet);
+    text-transform: capitalize;
   }
 }

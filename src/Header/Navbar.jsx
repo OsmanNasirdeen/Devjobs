@@ -58,7 +58,9 @@ const Navbar = () => {
             <label for="full-time">full time only</label>
           </div>
           <div className="filter-button">
-            <button type="submit">Search</button>
+            <button type="submit" className="button-violet">
+              Search
+            </button>
           </div>
         </form>
       </div>
