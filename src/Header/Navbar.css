@@ -1,8 +1,223 @@
-.Navbar-header {
-  position: absolute;
-  width: 1440px;
-  height: 162px;
-  left: 0px;
-  top: -1px;
-  background-image: url("../../assets/desktop/bg-pattern-header.svg");
+/* desktop styles */
+@media screen and (min-width: 1025px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .Navbar-header {
+    position: absolute;
+    width: 1440px;
+    height: 162px;
+    left: 0px;
+    top: -1px;
+    background-image: url("../../assets/desktop/bg-pattern-header.svg");
+  }
+  .navbar-logo {
+    position: absolute;
+    height: 32px;
+    width: 115px;
+    left: 165px;
+    top: 44px;
+  }
+  .theme-toggle-container {
+    list-style: none;
+    position: absolute;
+    width: 112px;
+    height: 24px;
+    left: 1163px;
+    top: 44px;
+    display: flex;
+    flex-direction: row;
+  }
+  .theme-toggle-checkbox {
+    -webkit-appearance: none;
+    position: relative;
+    width: 48px;
+    height: 24px;
+    border-radius: 12px;
+    background: var(--white);
+    cursor: pointer;
+  }
+
+  .theme-toggle-checkbox::before {
+    position: absolute;
+    content: "";
+    background: var(--violet);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 25%;
+    left: 4px;
+    transition: left 0.8s;
+  }
+  .theme-toggle-checkbox:hover::before {
+    background: var(--light-violet);
+  }
+  /* checked state of theme-toggle to change to */
+  .theme-toggle-checkbox:checked::before {
+    left: 60%;
+  }
+  /* moon - sun icons styles */
+  .icon-moon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 51.5px;
+    top: 3px;
+  }
+  .icon-sun {
+    position: absolute;
+    height: 19px;
+    width: 20px;
+    left: -23px;
+    top: 3px;
+  }
+  /* filter bar styles */
+  .filter-bar {
+    position: absolute;
+    width: 1110px;
+    height: 80px;
+    left: 165px;
+    top: 120px;
+    background: var(--white);
+  }
+  .filter-form {
+    /* position relative to position child elements absolute to it */
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .filter-search-container {
+    display: flex;
+    column-gap: 16px;
+    position: absolute;
+    width: 312px;
+    height: 24px;
+    left: 40px;
+  }
+  .icon-search-label,
+  .icon-location-label {
+    color: var(--violet);
+  }
+  .filter-search-container > input {
+    height: 20px;
+    width: 268px;
+    font-family: var(--font-family);
+    font-weight: var(--fw-regular);
+    font-size: 16px;
+    opacity: 0.5;
+    color: var(--very-dark-blue);
+  }
+
+  .filter-location-container > input {
+    height: 20px;
+    width: 134px;
+    font-family: var(--font-family);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-16);
+    opacity: 0.5;
+    color: var(--very-dark-blue);
+  }
+  /* style inputs when there is text */
+  .filter-location-container > input:valid {
+    border-right: 1px solid var(--violet);
+    width: 80px;
+  }
+  .filter-search-container > input:valid {
+    border-right: 1px solid var(--violet);
+    width: 150px;
+  }
+  .filter-location-container {
+    position: absolute;
+    display: flex;
+    column-gap: 16px;
+    width: 174px;
+    height: 24px;
+    left: 405px;
+  }
+  .filter-search-container::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 81px;
+    left: 330px;
+    top: -29px;
+    background: var(--dark-grey);
+    opacity: 0.2;
+  }
+  .filter-location-container::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 81px;
+    left: 300px;
+    top: -29px;
+    background: var(--dark-grey);
+    opacity: 0.2;
+  }
+  .filter-fullTime-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 24px;
+    left: 730px;
+  }
+  .filter-fullTime-container > label {
+    text-transform: capitalize;
+    font-family: var(--font-family);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-16);
+    color: var(--very-dark-blue);
+    height: 16px;
+    width: 128px;
+    left: 40px;
+  }
+
+  .full-time-checkbox {
+    -webkit-appearance: none;
+    height: 22px;
+    width: 24px;
+    margin-right: 16px;
+    border-radius: 3px;
+    background: var(--very-dark-blue);
+    cursor: pointer;
+    opacity: 0.1;
+  }
+
+  .full-time-checkbox:checked {
+    background: var(--violet);
+    opacity: 1;
+    background-image: url("../../assets/desktop/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+  }
+
+  .filter-button {
+    position: absolute;
+    width: 123px;
+    height: 48px;
+    left: 960px;
+  }
+  .filter-button > button {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-16);
+    color: var(--white);
+    background: var(--violet);
+    border: 1px solid var(--violet);
+    border-radius: 5px;
+    padding: 16px 40px 16px 33px;
+    cursor: pointer;
+  }
+  .filter-button > button:hover {
+    background: var(--light-violet);
+    border: 1px solid var(--light-violet);
+  }
 }

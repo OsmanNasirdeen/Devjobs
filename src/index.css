@@ -7,15 +7,22 @@
   --gray: #9daec2;
   --white: #ffffff;
   --dark-grey: #6e8098;
+  --font-family: "kumbh Sans";
   --fw-regular: 400;
   --fw-bold: 700;
   --fs-20: 20px;
   --fs-14: 14px;
   --fs-16: 16px;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
+
 .card {
   position: absolute;
   width: 350px;
@@ -39,4 +46,25 @@ body {
   left: 32px;
   top: 203px;
   color: var(--violet);
+}
+.remove-default {
+  -webkit-appearance: none;
+}
+input[type="text"] {
+  border-style: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+input[type="text"]:valid {
+  opacity: 1;
+}
+@media screen and (min-width: 1025px) {
+  body {
+    height: 1620px;
+    width: 1440px;
+    left: -721px;
+    top: -670px;
+    background: var(--light-grey);
+  }
 }
