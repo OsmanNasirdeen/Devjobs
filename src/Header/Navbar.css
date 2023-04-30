@@ -62,14 +62,14 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    left: 51.5px;
+    left: 65px;
     top: 3px;
   }
   .icon-sun {
     position: absolute;
     height: 19px;
     width: 20px;
-    left: -23px;
+    left: -37px;
     top: 3px;
   }
   /* filter bar styles */
@@ -96,10 +96,6 @@
     width: 312px;
     height: 24px;
     left: 40px;
-  }
-  .icon-search-label,
-  .icon-location-label {
-    color: var(--violet);
   }
   .filter-search-container > input {
     height: 20px;
