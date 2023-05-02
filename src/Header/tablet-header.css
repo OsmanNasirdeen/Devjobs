@@ -1,0 +1,134 @@
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1021px) {
+  body {
+    position: relative;
+    height: 2128px;
+    min-width: 768px;
+    left: 0px;
+    top: 0px;
+    background: var(--light-grey);
+  }
+  .Navbar-header {
+    position: absolute;
+    min-width: 768px;
+    height: 160px;
+    left: 0px;
+    top: 0px;
+    background-image: url("../../assets/tablet/bg-pattern-header.svg");
+  }
+  .navbar-logo {
+    position: absolute;
+    height: 32px;
+    width: 115px;
+    left: 39px;
+    top: 42px;
+  }
+  .theme-toggle-container {
+    left: 616px;
+    top: 46px;
+  }
+  .icon-sun {
+    position: absolute;
+    width: 20px;
+    height: 18.6px;
+    left: -37px;
+    top: 3px;
+  }
+  .icon-moon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 67px;
+    top: 2px;
+  }
+  .filter-bar {
+    position: absolute;
+    width: 689px;
+    height: 80px;
+    left: 39px;
+    top: 120px;
+  }
+  .filter-search-container {
+    column-gap: 16px;
+    position: absolute;
+    width: 147px;
+    /* background: green; */
+    height: 24px;
+    left: 40px;
+  }
+  .filter-search-container::after {
+    left: 199px;
+    top: -29px;
+  }
+  .filter-location-container::after {
+    left: 178px;
+    top: -29px;
+  }
+  .filter-search-container > input {
+    position: absolute;
+    left: 40px;
+    height: 16px;
+    width: 105px;
+    top: 3px;
+  }
+  .filter-location-container > input {
+    position: absolute;
+    width: 135px;
+    height: 16px;
+    top: 3px;
+    left: 33px;
+  }
+  .filter-location-container > input:valid {
+    border-right: 1px solid var(--violet);
+    width: 80px;
+  }
+  .filter-search-container > input:valid {
+    border-right: 1px solid var(--violet);
+    width: 147px;
+  }
+  .filter-location-container {
+    position: absolute;
+    column-gap: 16px;
+    width: 169px;
+    /* background: yellow; */
+    height: 24px;
+    left: 266px;
+  }
+  .filter-fullTime-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    /* background: orange; */
+    height: 24px;
+    left: 476px;
+    /* left: 496px; */
+  }
+  .full-time-checkbox {
+    margin-right: 16px;
+    position: absolute;
+    height: 24px;
+    right: 80.78%;
+  }
+  .filter-fullTime-container > label {
+    position: absolute;
+    height: 20px;
+    width: 113px;
+    left: 20px;
+  }
+  .filter-button {
+    position: absolute;
+    width: 80px;
+    height: 48px;
+    left: 592px;
+  }
+  .filter-button > button {
+    width: 80px;
+    height: 48px;
+  }
+}

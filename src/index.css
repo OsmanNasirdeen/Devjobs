@@ -22,6 +22,111 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
+.theme-toggle-container {
+  list-style: none;
+  position: absolute;
+  width: 112px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+}
+/* custom toggle box ---> changes night/day */
+.theme-toggle-checkbox {
+  -webkit-appearance: none;
+  position: relative;
+  width: 48px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--white);
+  cursor: pointer;
+}
+/* custom sliding ball inside toggle box to toggle the theme */
+.theme-toggle-checkbox::before {
+  position: absolute;
+  content: "";
+  background: var(--violet);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  top: 25%;
+  left: 4px;
+  transition: left 0.8s;
+}
+.theme-toggle-checkbox:hover::before {
+  background: var(--light-violet);
+}
+/* checked state of theme-toggle to change theme */
+.theme-toggle-checkbox:checked::before {
+  left: 60%;
+}
+/* general filter bar styles */
+.filter-bar {
+  background: var(--white);
+  border-radius: 6px;
+}
+
+.filter-form {
+  /* positioned relative to position child elements absolute to it */
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.filter-search-container,
+.filter-location-container {
+  display: flex;
+}
+.filter-search-container::after,
+.filter-location-container::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 81px;
+  background: var(--dark-grey);
+  opacity: 0.2;
+}
+.filter-search-container > input,
+.filter-location-container > input {
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  opacity: 0.5;
+  color: var(--very-dark-blue);
+}
+.filter-button > button {
+  text-transform: capitalize;
+}
+/* custom checkbox for full time filter */
+.full-time-checkbox {
+  -webkit-appearance: none;
+  height: 22px;
+  width: 24px;
+  border-radius: 3px;
+  background: var(--very-dark-blue);
+  cursor: pointer;
+  opacity: 0.1;
+}
+.filter-fullTime-container > label {
+  text-transform: capitalize;
+  font-family: var(--font-family);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-16);
+  color: var(--very-dark-blue);
+}
+/* full time box when checked */
+.full-time-checkbox:checked {
+  background: var(--violet);
+  opacity: 1;
+  background-image: url("../assets/desktop/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
 .button-violet {
   font-family: var(--font-family);
   font-weight: var(--fw-bold);
@@ -95,13 +200,4 @@ input[type="text"]:focus {
 }
 input[type="text"]:valid {
   opacity: 1;
-}
-@media screen and (min-width: 1025px) {
-  body {
-    height: 1620px;
-    width: 1440px;
-    left: -721px;
-    top: -670px;
-    background: var(--light-grey);
-  }
 }
