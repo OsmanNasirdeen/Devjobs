@@ -107,6 +107,10 @@ body {
   cursor: pointer;
   opacity: 0.1;
 }
+.full-time-checkbox:hover {
+  background: var(--violet);
+  opacity: 0.25;
+}
 .filter-fullTime-container > label {
   text-transform: capitalize;
   font-family: var(--font-family);
