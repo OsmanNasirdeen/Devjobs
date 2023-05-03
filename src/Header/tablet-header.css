@@ -14,11 +14,13 @@
   }
   .Navbar-header {
     position: absolute;
-    min-width: 768px;
+    width: 100vw;
     height: 160px;
     left: 0px;
     top: 0px;
     background-image: url("../../assets/tablet/bg-pattern-header.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .navbar-logo {
     position: absolute;
