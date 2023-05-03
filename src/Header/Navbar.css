@@ -3,9 +3,8 @@
   body {
     width: 1440px;
     height: 1620px;
-    left: -721px;
-    top: -670px;
-    background: var(--light-grey);
+    /* left: -721px; */
+    /* top: -670px; */
   }
 
   .Navbar-header {

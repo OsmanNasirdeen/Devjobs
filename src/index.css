@@ -21,6 +21,7 @@
 }
 body {
   font-family: "Kumbh Sans", sans-serif;
+  background: var(--light-grey);
 }
 .theme-toggle-container {
   list-style: none;

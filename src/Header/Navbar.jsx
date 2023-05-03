@@ -4,8 +4,9 @@ import sunIcon from "../../assets/desktop/icon-sun.svg";
 import logo from "../../assets/desktop/logo.svg";
 import locationIcon from "../../assets/desktop/icon-location.svg";
 import searchIcon from "../../assets/desktop/icon-search.svg";
-import "./Navbar.css";
+import "./mobile-header.css";
 import "./tablet-header.css";
+import "./Navbar.css";
 import { useRef } from "react";
 const Navbar = () => {
   const titlePlaceholderDesktop = "Filter by title, companies, expertise...";
@@ -33,7 +34,7 @@ const Navbar = () => {
         <form action="" className="filter-form">
           <div className="filter-search-container">
             <label for="title" className="icon-search-label">
-              <img src={searchIcon} alt="icon-search" />
+              <img src={searchIcon} alt="icon-search" className="icon-search" />
             </label>
             <input
               type="text"
