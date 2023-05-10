@@ -66,14 +66,27 @@
     line-height: 20px;
   }
   .filter-search-container::after {
-    content: url("../../assets/mobile/icon-filter.svg");
+    display: none;
+  }
+  .filter-location-container::after {
+    width: 353px;
+    height: 1px;
+    left: -50px;
+    top: 48px;
+    z-index: 10;
+    /* top: 297px; */
+  }
+
+  .icon-filter {
+    display: block;
+    position: absolute;
     left: 195px;
     /* left: 219px; */
     top: 30px;
     width: 20px;
     height: 20px;
     opacity: 1;
-    background: white;
+    background: var(--white);
   }
   .filter-search-container > label {
     position: absolute;
@@ -84,7 +97,8 @@
     top: 16px;
     background: var(--violet);
   }
-  /* icon-search svg image color change */
+  /* icon-search svg image color change to white  */
+  /* fist brightness and saturate needed to obtain desire color */
   .icon-search {
     filter: brightness(0) saturate(100%) invert(100%) sepia(93%) saturate(0%)
       hue-rotate(252deg) brightness(113%) contrast(100%);
@@ -99,8 +113,35 @@
   }
   .filter-fullTime-container {
     display: none;
+    width: 148px;
+    height: 24px;
+    left: 24px;
+    top: 240px;
+    /* top: 322px; */
+  }
+  .full-time-checkbox {
+    position: absolute;
+    right: 84%;
+    margin-bottom: 24px;
+  }
+  .filter-fullTime-container > label {
+    margin-bottom: 24px;
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    left: 40px;
+    /* top: 3px; */
+    line-height: 20px;
   }
   .filter-button {
     display: none;
+    position: absolute;
+    width: 279px;
+    height: 48px;
+    left: 24px;
+    /* left: 48px; */
+    top: 274px;
+    /* top: 370px; */
+    z-index: 10;
   }
 }

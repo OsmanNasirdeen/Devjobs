@@ -100,10 +100,6 @@
     left: 266px;
   }
   .filter-fullTime-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 108px;
     /* background: orange; */
     height: 24px;
