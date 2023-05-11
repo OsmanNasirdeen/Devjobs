@@ -1,18 +1,21 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   body {
     position: relative;
-    width: 375px;
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    /* width: 375px; */
     height: 3650px;
   }
   .Navbar-header {
     position: absolute;
-    width: 375px;
+    width: 100%;
+    /* width: 375px; */
     height: 136px;
     left: 0px;
     top: 0px;
     background-image: url("../../assets/mobile/bg-pattern-header.svg");
     background-repeat: no-repeat;
-    /* background-size: cover; */
+    background-size: cover;
   }
   .navbar-logo {
     position: absolute;
@@ -22,7 +25,8 @@
     top: 32px;
   }
   .theme-toggle-container {
-    left: 270px;
+    left: 73%;
+    /* left: 270px; */
     top: 36px;
   }
   .icon-moon {

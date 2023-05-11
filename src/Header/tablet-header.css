@@ -7,7 +7,7 @@
   body {
     position: relative;
     height: 2128px;
-    min-width: 768px;
+    /* width: 768px; */
     left: 0px;
     top: 0px;
   }

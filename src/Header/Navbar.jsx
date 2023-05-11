@@ -22,7 +22,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <div className="navbar" style={FilterActive ? styles.filterNavbar : {}}>
+      <div className="navbar">
         <div className="Navbar-header">
           <div className="navbar-logo">
             <img src={logo} alt="" />

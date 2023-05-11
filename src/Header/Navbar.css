@@ -1,7 +1,7 @@
 /* desktop styles */
 @media screen and (min-width: 1024px) {
   body {
-    width: 1440px;
+    /* width: 1440px; */
     height: 1620px;
     /* left: -721px; */
     /* top: -670px; */
