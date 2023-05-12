@@ -21,6 +21,7 @@
 }
 body {
   font-family: "Kumbh Sans", sans-serif;
+  background: var(--light-grey);
 }
 .theme-toggle-container {
   list-style: none;
@@ -77,6 +78,10 @@ body {
 .filter-location-container {
   display: flex;
 }
+/* filter icon ---> to be display only on mobile */
+.icon-filter {
+  display: none;
+}
 .filter-search-container::after,
 .filter-location-container::after {
   content: "";
@@ -96,6 +101,12 @@ body {
 }
 .filter-button > button {
   text-transform: capitalize;
+}
+.filter-fullTime-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* custom checkbox for full time filter */
 .full-time-checkbox {
@@ -204,4 +215,14 @@ input[type="text"]:focus {
 }
 input[type="text"]:valid {
   opacity: 1;
+}
+.modal-overlay {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0, 0, 0, 0.5);
 }

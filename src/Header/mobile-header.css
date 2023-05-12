@@ -1,0 +1,151 @@
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  body {
+    position: relative;
+    max-width: 100%;
+    /* overflow-x: hidden; */
+    /* width: 375px; */
+    height: 3650px;
+  }
+  .Navbar-header {
+    position: absolute;
+    width: 100%;
+    /* width: 375px; */
+    height: 136px;
+    left: 0px;
+    top: 0px;
+    background-image: url("../../assets/mobile/bg-pattern-header.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .navbar-logo {
+    position: absolute;
+    height: 32px;
+    width: 115px;
+    left: 24px;
+    top: 32px;
+  }
+  .theme-toggle-container {
+    left: 73%;
+    /* left: 270px; */
+    top: 36px;
+  }
+  .icon-moon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 67px;
+    top: 2px;
+  }
+  .icon-sun {
+    position: absolute;
+    width: 20px;
+    height: 18.6px;
+    left: -37px;
+    top: 3px;
+  }
+  .filter-bar {
+    position: absolute;
+    width: 327px;
+    height: 80px;
+    left: 24px;
+    top: 96px;
+  }
+  .filter-search-container {
+    /* column-gap: 16px; */
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    position: absolute;
+    width: 327px;
+    /* background: green; */
+    height: 80px;
+    left: 24px;
+    /* top: 96px; */
+  }
+  .filter-search-container > input {
+    position: absolute;
+    left: 24px;
+    height: 16px;
+    width: 105px;
+    top: 31px;
+    line-height: 20px;
+  }
+  .filter-search-container::after {
+    display: none;
+  }
+  .filter-location-container::after {
+    width: 353px;
+    height: 1px;
+    left: -50px;
+    top: 48px;
+    z-index: 10;
+    /* top: 297px; */
+  }
+
+  .icon-filter {
+    display: block;
+    position: absolute;
+    left: 195px;
+    /* left: 219px; */
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+    background: var(--white);
+  }
+  .filter-search-container > label {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 233px;
+    /* left: 263px; */
+    top: 16px;
+    background: var(--violet);
+  }
+  /* icon-search svg image color change to white  */
+  /* fist brightness and saturate needed to obtain desire color */
+  .icon-search {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(93%) saturate(0%)
+      hue-rotate(252deg) brightness(113%) contrast(100%);
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 14px;
+    top: 14px;
+  }
+  .filter-location-container {
+    display: none;
+  }
+  .filter-fullTime-container {
+    display: none;
+    width: 148px;
+    height: 24px;
+    left: 24px;
+    top: 240px;
+    /* top: 322px; */
+  }
+  .full-time-checkbox {
+    position: absolute;
+    right: 84%;
+    margin-bottom: 24px;
+  }
+  .filter-fullTime-container > label {
+    margin-bottom: 24px;
+    position: absolute;
+    width: 110px;
+    height: 20px;
+    left: 40px;
+    /* top: 3px; */
+    line-height: 20px;
+  }
+  .filter-button {
+    display: none;
+    position: absolute;
+    width: 279px;
+    height: 48px;
+    left: 24px;
+    /* left: 48px; */
+    top: 274px;
+    /* top: 370px; */
+    z-index: 10;
+  }
+}

@@ -7,10 +7,9 @@
   body {
     position: relative;
     height: 2128px;
-    min-width: 768px;
+    /* width: 768px; */
     left: 0px;
     top: 0px;
-    background: var(--light-grey);
   }
   .Navbar-header {
     position: absolute;
@@ -101,10 +100,6 @@
     left: 266px;
   }
   .filter-fullTime-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 108px;
     /* background: orange; */
     height: 24px;

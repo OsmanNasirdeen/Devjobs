@@ -1,3 +1,4 @@
+import "./index.css";
 import Navbar from "./Header/Navbar";
 function App() {
   return (
