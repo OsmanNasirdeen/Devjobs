@@ -2,7 +2,7 @@
   body {
     position: relative;
     max-width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     /* width: 375px; */
     height: 3650px;
   }
@@ -147,5 +147,21 @@
     top: 274px;
     /* top: 370px; */
     z-index: 10;
+  }
+  /* contents style section */
+  .cards-container {
+    top: 225px;
+    width: 768px;
+    left: 5%;
+    /* left: 24px; */
+    grid-template-columns: repeat(1, 327px);
+    grid-row-gap: 49px;
+  }
+  .card {
+    width: 327px;
+  }
+  .load-more-btn-container {
+    left: 117px;
+    top: 3540px;
   }
 }

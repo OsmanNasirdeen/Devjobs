@@ -128,4 +128,19 @@
     width: 80px;
     height: 48px;
   }
+  /* contents style section */
+  .cards-container {
+    width: 768px;
+    left: 39px;
+    grid-template-columns: repeat(2, 339px);
+    grid-column-gap: 11px;
+    grid-row-gap: 65px;
+  }
+  .card {
+    width: 339px;
+  }
+  .load-more-btn-container {
+    left: 307px;
+    top: 2019px;
+  }
 }
