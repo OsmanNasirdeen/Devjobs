@@ -2,7 +2,7 @@
   body {
     position: relative;
     max-width: 100%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     /* width: 375px; */
     height: 3650px;
   }
@@ -147,5 +147,32 @@
     top: 274px;
     /* top: 370px; */
     z-index: 10;
+  }
+  /* contents style section */
+  .main-container {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 208px;
+    width: 327px;
+    /* background-color: red; */
+  }
+  .cards-container {
+    /* top: 225px; */
+    /* width: ; */
+    /* background: green; */
+    height: 3300px;
+    /* left: 5%; */
+    /* left: 24px; */
+    grid-template-columns: repeat(1, 327px);
+    grid-row-gap: 49px;
+    padding-top: 10%;
+  }
+  .card {
+    width: 327px;
+  }
+  .load-more-btn-container {
+    /* left: 117px; */
+    /* top: 3540px; */
+    margin: 32px auto;
   }
 }

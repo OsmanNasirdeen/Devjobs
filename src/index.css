@@ -23,6 +23,12 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background: var(--light-grey);
 }
+body.modal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
 .theme-toggle-container {
   list-style: none;
   position: absolute;
@@ -179,31 +185,135 @@ img {
   background: var(--gray);
   border: 1px solid var(--gray);
 }
+.main-container {
+  position: relative;
+  width: 1110px;
+  /* height: 1132px; */
+  /* load more onclick to display rest of items */
+  /* overflow: hidden; */
+  left: 165px;
+  top: 280px;
+  /* background: green; */
+}
+.cards-container {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 65px;
+  /* position: relative; */
+  width: 100%;
+  height: 1132px;
+  overflow: hidden;
+  /* left: 165px; */
+  padding-top: 2%;
+  /* left: 0px; */
+  /* top: 2%; */
+}
+.load-more-btn-container {
+  height: 48px;
+  width: 141px;
+  margin: 56px auto;
+  /* position: relative; */
+  /* top: 1468px; */
+  /* left: 649px; */
+  /* bottom: 0px; */
+}
 
 .card {
-  position: absolute;
+  position: relative;
   width: 350px;
-  height: 253px;
+  height: 228px;
   background: var(--white);
   border-radius: 6px;
 }
+/* logo container */
 .company-logo {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   left: 32px;
-  top: 0px;
+  top: -10%;
+  border-radius: 15px;
+}
+.time-contract-container {
+  display: flex;
+  height: 20px;
+  width: 200px;
+  position: absolute;
+  left: 32px;
+  top: calc(50% - 28px / 2 - 63.5px);
+}
+.posted-at {
+  position: relative;
+  height: 16px;
+  /* width: 51px; */
+  /* right: 82.17%; */
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: 20px;
+  color: var(--dark-grey);
+}
+.dot {
+  position: relative;
+  height: 4px;
+  width: 4px;
+  left: 12px;
+  top: 54%;
+  border-radius: 50%;
+  background: var(--dark-grey);
+}
+.contract {
+  position: relative;
+  /* background: red; */
+  left: 24px;
+  height: 16px;
+  /* width: 98px; */
+  width: 72px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--dark-grey);
+}
+.position {
+  position: absolute;
+  width: 100%;
+  /* width: 261px; */
+  height: 20px;
+  left: 32px;
+  top: calc(50% - 25px / 2 - 29px);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-20);
+  line-height: 25px;
+  color: var(--very-dark-blue);
+}
+.company-name {
+  position: absolute;
+  width: auto;
+  height: 20px;
+  left: 32px;
+  /* right: 85%; */
+  top: calc(50% - 20px / 2 + 5.5px);
+  font-family: var(--font-family);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: 20px;
+  color: var(--dark-grey);
 }
 .company-location {
+  position: absolute;
   font-weight: var(--fw-bold);
   font-size: var(--fs-14);
   line-height: 17.36px;
   height: 17px;
-  width: fit-content;
+  width: 286px;
   left: 32px;
-  top: 203px;
+  top: calc(50% - 17px / 2 + 64px);
   color: var(--violet);
+  text-transform: capitalize;
 }
+
 .remove-default {
   -webkit-appearance: none;
 }

@@ -116,4 +116,8 @@
     /* background: red; */
     left: 950px;
   }
+  /* main contents style section */
+  .cards-container {
+    grid-template-columns: repeat(3, 350px);
+  }
 }

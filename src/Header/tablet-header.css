@@ -128,4 +128,24 @@
     width: 80px;
     height: 48px;
   }
+  /* contents style section */
+  .main-container {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    top: 245px;
+    width: 700px;
+    /* background-color: red; */
+  }
+  .cards-container {
+    height: 1698px;
+    grid-template-columns: repeat(2, 339px);
+    grid-column-gap: 11px;
+    grid-row-gap: 65px;
+    padding-top: 4%;
+  }
+  .card {
+    width: 339px;
+  }
+  .load-more-btn-container {
+  }
 }
