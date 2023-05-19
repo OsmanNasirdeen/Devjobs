@@ -1,19 +1,21 @@
 import React from "react";
-import scoot from "../../../assets/logos/scoot.svg";
-const Card = () => {
+// import scoot from "../../../assets/logos/scoot.svg";
+const Card = ({ details }) => {
   return (
     <div className="card">
-      <div className="company-logo">
-        <img src={scoot} alt="" />
+      <div
+        className="company-logo"
+        style={{ background: details.logoBackground }}>
+        <img src={details.logo} alt="" />
       </div>
       <div className="time-contract-container">
-        <h3 className="posted-at">5h ago</h3>
+        <h3 className="posted-at">{details.postedAt}</h3>
         <span className="dot"></span>
-        <h3 className="contract">full time</h3>
+        <h3 className="contract">{details.contract}</h3>
       </div>
-      <h2 className="position">senior software engineer</h2>
-      <h3 className="company-name">scoot</h3>
-      <h4 className="company-location">united kingdom</h4>
+      <h2 className="position">{details.position}</h2>
+      <h3 className="company-name">{details.company}</h3>
+      <h4 className="company-location">{details.location}</h4>
     </div>
   );
 };

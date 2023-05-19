@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import moonIcon from "../../assets/desktop/icon-moon.svg";
-import sunIcon from "../../assets/desktop/icon-sun.svg";
-import logo from "../../assets/desktop/logo.svg";
-import locationIcon from "../../assets/desktop/icon-location.svg";
-import searchIcon from "../../assets/desktop/icon-search.svg";
-import filterIcon from "../../assets/mobile/icon-filter.svg";
+import moonIcon from "../components/cards/assets/desktop/icon-moon.svg";
+import sunIcon from "../components/cards/assets/desktop/icon-sun.svg";
+import logo from "../components/cards/assets/desktop/logo.svg";
+import locationIcon from "../components/cards/assets/desktop/icon-location.svg";
+import searchIcon from "../components/cards/assets/desktop/icon-search.svg";
+import filterIcon from "../components/cards/assets/mobile/icon-filter.svg";
 import "./mobile-header.css";
 import "./tablet-header.css";
 import "./Navbar.css";
@@ -19,6 +19,7 @@ const Navbar = () => {
   // display filter on mobile function
   const displayFilter = () => {
     setFilterActive(() => !FilterActive);
+    document.body.classList.toggle("modal-open");
   };
   return (
     <>
