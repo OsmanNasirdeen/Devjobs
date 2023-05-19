@@ -1,12 +1,17 @@
 import "./index.css";
-import Navbar from "./Header/Navbar";
-import Main from "../src/components/main/main";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Homepage/Home";
+import ErrorPage from "./components/Homepage/errorPage";
+import Details from "./components/DetailsPage/Details";
 function App() {
   return (
-    <>
-      <Navbar />
-      <Main />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="positions/:position" element={<Details />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
