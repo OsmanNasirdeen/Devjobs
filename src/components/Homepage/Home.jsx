@@ -1,13 +1,8 @@
 import React from "react";
-import Navbar from "../../Header/Navbar";
-import Main from "../main/mainContents";
-const Home = () => {
-  return (
-    <>
-      <Navbar />
-      <Main />
-    </>
-  );
+
+// {children} renders navbar & mainContents components
+const Home = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default Home;

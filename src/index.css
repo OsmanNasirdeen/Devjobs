@@ -185,6 +185,8 @@ img {
   background: var(--gray);
   border: 1px solid var(--gray);
 }
+
+/* body contents( CARD & load-more btn ) styles  */
 .main-container {
   position: relative;
   width: 1110px;
@@ -287,6 +289,13 @@ img {
   font-size: var(--fs-20);
   line-height: 25px;
   color: var(--very-dark-blue);
+}
+.link-to-details-page {
+  text-decoration: none;
+  color: inherit;
+}
+.link-to-details-page:hover {
+  color: var(--dark-grey);
 }
 .company-name {
   position: absolute;

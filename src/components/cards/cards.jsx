@@ -1,23 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Card from "./card";
-const Cards = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(`http://localhost:8000/`)
-      .then((response) => {
-        response.json().then((data) => {
-          setData(() => data.data);
-        });
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+const Cards = ({ data }) => {
   return (
     <div className="cards-container">
       {data.map((job) => {
         const {
+          id,
           company,
           logo,
           logoBackground,
@@ -29,6 +17,7 @@ const Cards = () => {
         return (
           <Card
             details={{
+              id: id,
               company: company,
               logo: logo,
               logoBackground: logoBackground,
@@ -37,7 +26,8 @@ const Cards = () => {
               contract: contract,
               location: location,
             }}
-            key={job.id}
+            key={id}
+            data={data}
           />
         );
       })}
