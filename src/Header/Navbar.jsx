@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import moonIcon from "../components/cards/assets/desktop/icon-moon.svg";
-import sunIcon from "../components/cards/assets/desktop/icon-sun.svg";
-import logo from "../components/cards/assets/desktop/logo.svg";
+import React, { useState, useRef } from "react";
 import locationIcon from "../components/cards/assets/desktop/icon-location.svg";
 import searchIcon from "../components/cards/assets/desktop/icon-search.svg";
 import filterIcon from "../components/cards/assets/mobile/icon-filter.svg";
@@ -9,8 +6,8 @@ import "./mobile-header.css";
 import "./tablet-header.css";
 import "./Navbar.css";
 
+// modal for mobile styles
 import { styles } from "./features/modalstyles";
-import { useRef } from "react";
 const Navbar = () => {
   const titlePlaceholderDesktop = "Filter by title, companies, expertise...";
   const titlePlaceholderTablet = "Filter by title...";
@@ -24,22 +21,6 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="Navbar-header">
-          <div className="navbar-logo">
-            <img src={logo} alt="" />
-          </div>
-          <ul className="theme-toggle-container">
-            <li className="icon-sun">
-              <img src={sunIcon} alt="icon-sun.svg" />
-            </li>
-            <li>
-              <input type="checkbox" className="theme-toggle-checkbox" />
-            </li>
-            <li className="icon-moon">
-              <img src={moonIcon} alt="icon-moon.svg" />
-            </li>
-          </ul>
-        </div>
         <div className="filter-bar">
           <form action="" className="filter-form">
             <div className="filter-search-container">
