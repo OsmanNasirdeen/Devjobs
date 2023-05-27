@@ -590,7 +590,6 @@ input[type="text"]:valid {
 }
 .details-footer-position {
   position: absolute;
-  width: 241px;
   height: 51px;
   left: 355px;
   top: 23px;

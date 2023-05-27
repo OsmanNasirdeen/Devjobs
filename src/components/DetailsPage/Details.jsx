@@ -40,9 +40,9 @@ const Details = () => {
             <p className="details-company-site">{website}</p>
           </div>
           <div className="details-companyLink-btn-container">
-            <button className="button-light-grey">
-              <a href={website}>company site</a>
-            </button>
+            <a href={website}>
+              <button className="button-light-grey">company site</button>
+            </a>
           </div>
         </div>
       </header>
@@ -59,7 +59,9 @@ const Details = () => {
               <h2 className="location details-location">{location}</h2>
             </div>
             <div className="main-apply-now-btn-container">
-              <button className="button-violet">Apply Now</button>
+              <a href={apply}>
+                <button className="button-violet">Apply Now</button>
+              </a>
             </div>
           </div>
           <div className="details-position-description details-description">
@@ -101,7 +103,9 @@ const Details = () => {
           <p className="posted-at">So Digital Inc.</p>
         </div>
         <div className="details-footer-apply-btn-container">
-          <button className="button-violet">apply Now</button>
+          <a href={apply}>
+            <button className="button-violet">Apply Now</button>
+          </a>
         </div>
       </footer>
     </div>
