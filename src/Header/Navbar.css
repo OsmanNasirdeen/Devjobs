@@ -1,10 +1,12 @@
 /* desktop styles */
 @media screen and (min-width: 1024px) {
+  /* home page styles */
   body {
-    /* width: 1440px; */
-    height: 1620px;
+    width: 1440px;
+    /* height: 1620px; */
     /* left: -721px; */
     /* top: -670px; */
+    overflow-x: hidden;
   }
 
   .Navbar-header {
@@ -120,4 +122,17 @@
   .cards-container {
     grid-template-columns: repeat(3, 350px);
   }
+
+  /* detail page styles */
+  .details-header-bar {
+    width: 730px;
+    height: 140px;
+    left: 355px;
+    top: 120px;
+  }
+}
+
+.details-position-info-container {
+  left: 355px;
+  top: 152px;
 }

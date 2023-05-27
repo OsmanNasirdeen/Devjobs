@@ -10,9 +10,11 @@
   --font-family: "kumbh Sans";
   --fw-regular: 400;
   --fw-bold: 700;
+  --fs-24: 24px;
   --fs-20: 20px;
   --fs-14: 14px;
   --fs-16: 16px;
+  --fs-28: 28px;
 }
 * {
   margin: 0;
@@ -67,7 +69,8 @@ body.modal-open {
   left: 60%;
 }
 /* general filter bar styles */
-.filter-bar {
+.filter-bar,
+.details-header-bar {
   background: var(--white);
   border-radius: 6px;
 }
@@ -290,6 +293,15 @@ img {
   line-height: 25px;
   color: var(--very-dark-blue);
 }
+.position-typo {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-20);
+  line-height: 25px;
+  color: var(--very-dark-blue);
+}
+a {
+  text-decoration: none;
+}
 .link-to-details-page {
   text-decoration: none;
   color: inherit;
@@ -309,6 +321,15 @@ img {
   font-size: var(--fs-16);
   line-height: 20px;
   color: var(--dark-grey);
+}
+.location {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-14);
+  line-height: 17.36px;
+  height: 17px;
+  width: 286px;
+  color: var(--violet);
+  text-transform: capitalize;
 }
 .company-location {
   position: absolute;
@@ -344,4 +365,240 @@ input[type="text"]:valid {
   width: 100vw;
   height: 100vh;
   background: rgb(0, 0, 0, 0.5);
+}
+
+/* details page styles */
+/* class for description paragraphs */
+.details-description {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  line-height: 26px;
+  color: var(--dark-grey);
+}
+/* class for heading 3 */
+.details-h3 {
+  font-family: "Kumbh Sans";
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+  line-height: 25px;
+  color: var(--very-dark-blue);
+  text-transform: capitalize;
+}
+/* class for list points container */
+.list-container {
+  /* position: absolute; */
+  width: 639px;
+  margin: 0px 43px 48px 64px;
+  color: var(--dark-grey);
+  line-height: 27px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  width: 639px;
+  /* height: 124px; */
+  /* background-color: lawngreen; */
+  /* left: 48px; */
+  /* top: 651px; */
+}
+.details-header-bar {
+  position: relative;
+}
+.details-company-logo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  left: 0%;
+  top: 0%;
+}
+.details-companyNameSite-container {
+  position: absolute;
+  width: 78px;
+  height: 56px;
+  left: 180px;
+  top: 42px;
+  /* background: green; */
+}
+
+.details-company-name {
+  position: absolute;
+  height: 24px;
+  left: 0%;
+  font-family: "Kumbh Sans";
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-24);
+  color: var(--very-dark-blue);
+}
+.details-company-site {
+  position: absolute;
+  height: 16px;
+  top: calc(50% - 16px / 2 + 17px);
+  font-family: "Kumbh Sans";
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-16);
+  color: var(--dark-grey);
+}
+.details-companyLink-btn-container {
+  position: absolute;
+  width: 147px;
+  height: 48px;
+  right: 43px;
+  top: 46px;
+}
+.details-position-info-container {
+  position: relative;
+  width: 730px;
+  background: var(--white);
+  /* height: 1257px; */
+}
+/* main container for body */
+.details-main-info-container {
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+}
+.details-position-about {
+  position: relative;
+  width: 639px;
+  height: 87px;
+  left: 48px;
+  top: 48px;
+  /* background: yellow; */
+}
+.main-apply-now-btn-container {
+  position: absolute;
+  right: 0%;
+  /* top: 25px; */
+  top: calc(50% - 28px / 2 - 3px);
+}
+.details-time-contract-container {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  height: 19px;
+  width: 152px;
+  left: 0px;
+  top: 0px;
+  color: var(--dark-grey);
+}
+/* position title */
+.details-position {
+  height: 28px;
+  position: absolute;
+  height: 28px;
+  left: 0%;
+  top: calc(50% - 28px / 2 - 3px);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-28);
+  color: var(--very-dark-blue);
+}
+.details-location {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 17px / 2 + 34px);
+}
+
+.details-position-description {
+  /* background: yellow; */
+  width: 639px;
+  /* position: absolute; */
+  position: relative;
+  margin: 82px 0px 40px 0px;
+  /* height: auto; */
+  /* height: 234px; */
+  left: 6.58%;
+  top: calc(50% - 234px / 2 - 336.5px);
+}
+.position-requirements-container {
+  /* background: cyan; */
+  /* position: relative; */
+  /* top: 1px; */
+  /* top: 330px; */
+  /* top: 344px; */
+}
+.requirements-heading {
+  margin: 0px 0px 20px 48px;
+  /* position: absolute; */
+  height: 25px;
+  /* left: 6.58%; */
+  /* top: calc(50% - 25px / 2 - 167px); */
+}
+
+.requirements-description {
+  /* position: absolute; */
+  /* height: 120px; */
+  /* background-color: red; */
+  width: 639px;
+  margin: 0px 43px 24px 48px;
+  /* left: 6.58%; */
+  /* right: 5.89%; */
+  /* top: calc(50% - 130px / 2 - 66.5px); */
+}
+
+.position-roles-container {
+  /* background: red; */
+  /* position: relative; */
+  /* height: 178px; */
+  /* width: 639px; */
+  /* left: 48px; */
+  /* top: 443px; */
+  top: 326px;
+}
+.roles-heading {
+  margin: 0px 0px 0px 48px;
+  height: 20px;
+  width: 168px;
+  /* line-height: 25px; */
+}
+.roles-description-container {
+  /* position: absolute; */
+  /* left: 6.58%; */
+  /* right: 5.89%; */
+  /* top: 67.86%; */
+  /* bottom: 17.98%; */
+  width: 639px;
+}
+.roles-description {
+  /* position: absolute; */
+  /* height: 120px; */
+  /* background-color: red; */
+  width: 639px;
+  margin: 28px 43px 24px 48px;
+  /* left: 6.58%; */
+  /* right: 5.89%; */
+  /* top: calc(50% - 130px / 2 - 66.5px); */
+}
+
+.roles-list {
+  /* position: absolute; */
+  /* width: 639px; */
+  /* margin: 0px 43px 48px 64px; */
+  /* height: 154px; */
+  /* left: 48px; */
+  /* top: 1055px; */
+}
+.details-footer {
+  position: relative;
+  background: var(--white);
+  /* width: 1440px; */
+  width: 100%;
+  height: 96px;
+  top: 193px;
+}
+.details-footer-position {
+  position: absolute;
+  width: 241px;
+  height: 51px;
+  left: 355px;
+  top: 23px;
+}
+.details-footer-apply-btn-container {
+  position: absolute;
+  width: 141px;
+  height: 48px;
+  right: 355px;
+  top: 25px;
 }
