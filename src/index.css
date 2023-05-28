@@ -386,20 +386,41 @@ input[type="text"]:valid {
   color: var(--very-dark-blue);
   text-transform: capitalize;
 }
-/* class for list points container */
+/* class for req and role list points container */
 .list-container {
-  /* position: absolute; */
+  list-style: none;
   width: 639px;
-  margin: 0px 43px 48px 64px;
+  margin: 0px 43px 48px 78px;
   color: var(--dark-grey);
   line-height: 27px;
   font-weight: var(--fw-regular);
   font-size: var(--fs-16);
   width: 639px;
-  /* height: 124px; */
-  /* background-color: lawngreen; */
-  /* left: 48px; */
-  /* top: 651px; */
+}
+/* custom req list bullet points */
+.requirements-list > li::before {
+  content: "\2022";
+  width: 4px;
+  height: 4px;
+  color: var(--violet);
+  display: inline-block;
+  margin-right: 32px;
+  margin-left: -2em;
+}
+.roles-list {
+  /* counter for custom roles list numbers */
+  counter-reset: one;
+}
+.roles-list > li::before {
+  counter-increment: one;
+  content: counter(one);
+  width: 2em;
+  height: 26px;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-16);
+  color: var(--violet);
+  display: inline-block;
+  margin-left: -2em;
 }
 .details-header-bar {
   position: relative;
@@ -575,7 +596,7 @@ input[type="text"]:valid {
 .roles-list {
   /* position: absolute; */
   /* width: 639px; */
-  /* margin: 0px 43px 48px 64px; */
+  /* margin: 0px 43px 48px 94px; */
   /* height: 154px; */
   /* left: 48px; */
   /* top: 1055px; */
