@@ -6,7 +6,6 @@
     /* height: 1620px; */
     /* left: -721px; */
     /* top: -670px; */
-    overflow-x: hidden;
   }
 
   .Navbar-header {
@@ -130,9 +129,31 @@
     left: 355px;
     top: 120px;
   }
-}
-
-.details-position-info-container {
-  left: 355px;
-  top: 152px;
+  .details-company-logo {
+    width: 140px;
+    height: 140px;
+    left: 0%;
+    top: 0%;
+  }
+  .details-position-info-container {
+    left: 355px;
+    top: 152px;
+  }
+  .details-companyNameSite-container {
+    left: 180px;
+    top: 42px;
+  }
+  .details-companyLink-btn-container {
+    right: 43px;
+    top: 46px;
+  }
+  .main-apply-now-btn-container {
+    right: 0%;
+    /* top: 25px; */
+    top: calc(50% - 28px / 2 - 3px);
+  }
+  .details-position {
+    height: 28px;
+    left: 0%;
+  }
 }

@@ -60,7 +60,9 @@ const Details = () => {
             </div>
             <div className="main-apply-now-btn-container">
               <a href={apply}>
-                <button className="button-violet">Apply Now</button>
+                <button className="button-violet btn-applyNow">
+                  Apply Now
+                </button>
               </a>
             </div>
           </div>
@@ -104,7 +106,7 @@ const Details = () => {
         </div>
         <div className="details-footer-apply-btn-container">
           <a href={apply}>
-            <button className="button-violet">Apply Now</button>
+            <button className="button-violet btn-applyNow">Apply Now</button>
           </a>
         </div>
       </footer>
