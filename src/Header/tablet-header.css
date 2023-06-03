@@ -6,10 +6,11 @@
 @media screen and (min-width: 768px) and (max-width: 1021px) {
   body {
     position: relative;
-    height: 2128px;
+    /* height: 2128px; */
     /* width: 768px; */
     left: 0px;
     top: 0px;
+    overflow-x: hidden;
   }
   .Navbar-header {
     position: absolute;
@@ -148,4 +149,71 @@
   }
   .load-more-btn-container {
   }
+
+  /* details page styles */
+  .details-header-bar {
+    width: 689px;
+    height: 140px;
+    left: 39px;
+    top: 120px;
+  }
+  .details-company-logo {
+    width: 140px;
+    height: 140px;
+    left: 0%;
+    top: 0%;
+  }
+  .details-companyNameSite-container {
+    left: 180px;
+    top: 42px;
+  }
+  .details-companyLink-btn-container {
+    right: 43px;
+    top: 46px;
+  }
+  .main-apply-now-btn-container {
+    right: 0%;
+    /* top: 25px; */
+    top: calc(50% - 28px / 2 - 3px);
+  }
+  .details-position-info-container {
+    left: 39px;
+    top: 152px;
+  }
+  .details-position {
+    height: 28px;
+    left: 0%;
+  }
+  .requirements-heading {
+    height: 20px;
+  }
+  .roles-description,
+  .requirements-description {
+    width: 593px;
+    margin: 28px 48px 24px 48px;
+  }
+  .details-position-description {
+    width: 593px;
+  }
+  .list-container {
+    max-width: 593px;
+  }
+  .details-footer {
+    width: 100%;
+    height: 96px;
+    top: 205px;
+  }
+  .details-footer-position {
+    height: 51px;
+    left: 39px;
+    top: 23px;
+  }
+  .details-footer-apply-btn-container {
+    left: 587px;
+    top: 25px;
+  }
 }
+/* 
+
+
+ */
