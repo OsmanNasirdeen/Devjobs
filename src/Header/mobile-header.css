@@ -181,18 +181,21 @@
     height: 50px;
     /* right: 139px; */
     left: calc(50% - 25px);
+    /* left: 42.5%; */
     top: -10%;
     border-radius: 15px;
   }
   .details-companyNameSite-container {
-    background: green;
-    width: auto;
     height: 52px;
     top: 49px;
-    left: 26%;
+    left: 136px;
+    /* left: calc(40%); */
+  }
+  .details-company-name {
+    width: 190px;
   }
   .details-company-site {
-    left: -32px;
+    left: -50px;
   }
   .details-companyLink-btn-container {
     left: 90px;
@@ -204,7 +207,7 @@
     top: 125px;
   }
   .details-position-about {
-    width: 279px;
+    /* width: 279px; */
     height: 175px;
     left: 24px;
     top: 40px;
