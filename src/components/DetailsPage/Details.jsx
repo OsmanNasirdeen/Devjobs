@@ -23,7 +23,6 @@ const Details = () => {
     requirements,
     role,
   } = positionItem;
-  console.log(logo);
   const { content: reqContents, items: reqItems } = requirements;
   const { content: rolesContents, items: rolesItems } = role;
   return (
@@ -77,8 +76,8 @@ const Details = () => {
               </div>
             </div>
             <ul className="requirements-list list-container">
-              {reqItems.map((item) => {
-                return <li>{item}</li>;
+              {reqItems.map((item, index) => {
+                return <li key={index}>{item}</li>;
               })}
             </ul>
           </div>
@@ -90,8 +89,8 @@ const Details = () => {
               </div>
             </div>
             <ol className="roles-list list-container">
-              {rolesItems.map((item) => {
-                return <li>{item}</li>;
+              {rolesItems.map((item, index) => {
+                return <li key={index}>{item}</li>;
               })}
             </ol>
           </div>
