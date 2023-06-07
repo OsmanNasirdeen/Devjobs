@@ -198,8 +198,7 @@
   .details-company-site {
     position: relative;
     width: 195px;
-    overflow-x: scroll;
-    left: -32px;
+    left: -68px;
   }
   .details-companyLink-btn-container {
     left: 90px;
