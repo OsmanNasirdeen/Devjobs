@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Card = ({ details, data }) => {
+const Card = ({ details, data, darkTheme }) => {
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{ background: darkTheme ? "var(--very-dark-blue)" : "" }}>
       <div
         className="company-logo"
         style={{ background: details.logoBackground }}>
@@ -13,7 +15,7 @@ const Card = ({ details, data }) => {
         <span className="dot"></span>
         <h3 className="contract">{details.contract}</h3>
       </div>
-      <h2 className="position">
+      <h2 className="position" style={{ color: darkTheme ? "white" : "" }}>
         <Link
           className="link-to-details-page"
           to={`/positions/${details.id}`}

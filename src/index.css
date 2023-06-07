@@ -21,6 +21,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.body-midnight {
+  background: var(--midnight);
+}
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   background: var(--light-grey);
@@ -145,7 +149,7 @@ body.modal-open {
   background-image: url("../assets/desktop/icon-check.svg");
   background-repeat: no-repeat;
   background-position: center;
-  color: white;
+  /* color: white; */
 }
 img {
   max-width: 100%;
@@ -187,6 +191,23 @@ img {
 .button-light-grey:hover {
   background: var(--gray);
   border: 1px solid var(--gray);
+}
+.dark-button {
+  font-family: var(--font-family);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-16);
+  line-height: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 48px;
+  width: 141px;
+  background: #3c414c;
+  color: var(--white);
+  border: 1px solid #3c414c;
+}
+.dark-button:hover {
+  background: #6a6e76;
+  border: 1px solid #6a6e76;
 }
 
 /* body contents( CARD & load-more btn ) styles  */
@@ -355,6 +376,22 @@ input[type="text"]:focus {
 }
 input[type="text"]:valid {
   opacity: 1;
+}
+.modal {
+  /* initially hide modal */
+  display: none;
+}
+.modal-container {
+  position: fixed;
+  width: 327px;
+  height: 217px;
+  left: 24px;
+  top: 225px;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 6px;
+  z-index: 9;
 }
 .modal-overlay {
   z-index: 1;
@@ -570,4 +607,10 @@ input[type="text"]:valid {
   height: 48px;
   left: 944px;
   top: 25px;
+}
+.white-background {
+  background: var(--white);
+}
+.dark-background {
+  background: var(--very-dark-blue);
 }

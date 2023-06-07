@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./card";
-const Cards = ({ data }) => {
+const Cards = ({ data, darkTheme }) => {
   return (
     <div className="cards-container">
       {data.map((job) => {
@@ -28,6 +28,7 @@ const Cards = ({ data }) => {
             }}
             key={id}
             data={data}
+            darkTheme={darkTheme}
           />
         );
       })}
