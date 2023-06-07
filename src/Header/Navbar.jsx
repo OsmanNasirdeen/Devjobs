@@ -5,10 +5,11 @@ import filterIcon from "../components/cards/assets/mobile/icon-filter.svg";
 import "./mobile-header.css";
 import "./tablet-header.css";
 import "./Navbar.css";
-
+// darkTheme styles
+import { darkThemeStyles } from "./features/darkThemeStyles";
 // modal for mobile styles
 import { styles } from "./features/modalstyles";
-const Navbar = () => {
+const Navbar = ({ darkTheme }) => {
   const titlePlaceholderDesktop = "Filter by title, companies, expertise...";
   const titlePlaceholderTablet = "Filter by title...";
   const deviceSize = useRef(window.innerWidth);
@@ -21,7 +22,9 @@ const Navbar = () => {
   return (
     <>
       <div className="navbar">
-        <div className="filter-bar">
+        <div
+          className="filter-bar"
+          style={{ background: darkTheme ? "var(--very-dark-blue)" : "" }}>
           <form action="" className="filter-form">
             <div className="filter-search-container">
               <label for="title" className="icon-search-label">
@@ -40,9 +43,23 @@ const Navbar = () => {
                     : titlePlaceholderTablet
                 }
                 required
+                style={darkTheme ? darkThemeStyles.filterInputStyles : {}}
               />
-              <span className="icon-filter" onClick={() => displayFilter()}>
-                <img src={filterIcon} alt="" />
+              <span
+                className="icon-filter"
+                onClick={() => displayFilter()}
+                style={{
+                  background: darkTheme ? "var(--very-dark-blue)" : "",
+                }}>
+                <img
+                  src={filterIcon}
+                  alt=""
+                  style={{
+                    filter: darkTheme
+                      ? "brightness(0) saturate(100%) invert(100%) sepia(93%) saturate(0%) hue-rotate(252deg) brightness(113%) contrast(100%)"
+                      : " ",
+                  }}
+                />
               </span>
             </div>
 
@@ -57,6 +74,7 @@ const Navbar = () => {
                 id="location"
                 placeholder="Filter by location"
                 required
+                style={darkTheme ? darkThemeStyles.filterInputStyles : {}}
               />
             </div>
             <div
@@ -66,9 +84,15 @@ const Navbar = () => {
                 type="checkbox"
                 name="full-time"
                 id="full-time"
-                className="full-time-checkbox"
+                className={`full-time-checkbox ${
+                  darkTheme ? "white-background" : ""
+                }`}
               />
-              <label for="full-time">
+              <label
+                for="full-time"
+                style={{
+                  color: darkTheme ? "var(--white)" : "",
+                }}>
                 {deviceSize.current > 1024 || deviceSize.current < 767
                   ? "full time only"
                   : "full time"}
@@ -88,10 +112,8 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className="modal"
-        style={
-          FilterActive ? styles.modalContainer : { display: "none" }
-        }></div>
+        className={`modal ${FilterActive ? "modal-container" : ""}`}
+        style={darkTheme ? { background: "var(--very-dark-blue)" } : {}}></div>
       <div
         className="modal-overlay"
         style={FilterActive ? styles.modalOverlay : {}}></div>

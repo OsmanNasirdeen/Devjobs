@@ -9,6 +9,9 @@ import Details from "./components/DetailsPage/Details";
 import ErrorPage from "./components/Homepage/errorPage";
 import SharedLayout from "./Header/sharedLayout";
 function App() {
+  // theme toggle state
+  const [darkTheme, setDarkTheme] = useState(false);
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -25,19 +28,26 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route
+          path="/"
+          element={
+            <SharedLayout darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+          }>
           <Route
             index
             element={
               <Home>
-                <Navbar />
+                <Navbar darkTheme={darkTheme} />
                 <Main>
-                  <Cards data={data} />
+                  <Cards data={data} darkTheme={darkTheme} />
                 </Main>
               </Home>
             }
           />
-          <Route path="positions/:positionId" element={<Details />} />
+          <Route
+            path="positions/:positionId"
+            element={<Details darkTheme={darkTheme} />}
+          />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>

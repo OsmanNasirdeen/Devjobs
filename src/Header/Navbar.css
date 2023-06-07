@@ -3,9 +3,7 @@
   /* home page styles */
   body {
     width: 1440px;
-    /* height: 1620px; */
-    /* left: -721px; */
-    /* top: -670px; */
+    overflow-x: hidden;
   }
 
   .Navbar-header {

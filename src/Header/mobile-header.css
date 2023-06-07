@@ -4,7 +4,6 @@
     max-width: 100%;
     overflow-x: hidden;
     /* width: 375px; */
-    /* height: 3650px; */
   }
   .Navbar-header {
     position: absolute;
@@ -91,6 +90,7 @@
     height: 20px;
     opacity: 1;
     background: var(--white);
+    cursor: pointer;
   }
   .filter-search-container > label {
     position: absolute;
@@ -198,8 +198,7 @@
   .details-company-site {
     position: relative;
     width: 195px;
-    overflow-x: scroll;
-    left: -32px;
+    left: -68px;
   }
   .details-companyLink-btn-container {
     left: 90px;

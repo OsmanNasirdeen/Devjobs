@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useParams, useLocation } from "react-router-dom";
-const Details = () => {
+const Details = ({ darkTheme }) => {
+  const deviceSize = useRef(window.innerWidth);
   const { state } = useLocation();
   const { positionId } = useParams();
   const { data } = state;
-
   const positionItem = data.find((element) => {
     return element.id === Number(positionId);
   });
@@ -28,24 +28,50 @@ const Details = () => {
   return (
     <div>
       <header>
-        <div className="details-header-bar">
+        <div
+          className="details-header-bar"
+          style={{
+            background: darkTheme ? "var(--very-dark-blue)" : "",
+          }}>
           <div
             className="details-company-logo"
             style={{ background: logoBackground }}>
             <img src={`.${logo}`} alt="" />
           </div>
           <div className="details-companyNameSite-container">
-            <p className="details-company-name">{company}</p>
+            <p
+              className="details-company-name"
+              style={{
+                color: darkTheme ? "var(--white)" : "",
+              }}>
+              {company}
+            </p>
             <p className="details-company-site">{website}</p>
           </div>
           <div className="details-companyLink-btn-container">
             <a href={website}>
-              <button className="button-light-grey">company site</button>
+              <button
+                className={`${darkTheme ? "dark-button" : "button-light-grey"}`}
+                style={
+                  darkTheme && deviceSize.current < 767
+                    ? {
+                        background: "#1f273f",
+                        color: "var(--violet)",
+                        border: "1px solid #1f273f",
+                      }
+                    : {}
+                }>
+                Company Site
+              </button>
             </a>
           </div>
         </div>
       </header>
-      <main className="details-position-info-container">
+      <main
+        className="details-position-info-container"
+        style={{
+          background: darkTheme ? "var(--very-dark-blue)" : "",
+        }}>
         <div className="details-main-info-container">
           <div className="details-position-about">
             <div>
@@ -54,7 +80,13 @@ const Details = () => {
                 <li className="dot"></li>
                 <li className="contract details-contract">{contract}</li>
               </ul>
-              <h3 className="details-position">{position}</h3>
+              <h3
+                className="details-position"
+                style={{
+                  color: darkTheme ? "var(--white)" : "",
+                }}>
+                {position}
+              </h3>
               <h2 className="location details-location">{location}</h2>
             </div>
             <div className="main-apply-now-btn-container">
@@ -70,7 +102,13 @@ const Details = () => {
           </div>
           <div className="position-requirements-container">
             <div className="requirements-description-container">
-              <h3 className="requirements-heading details-h3">Requirements</h3>
+              <h3
+                className="requirements-heading details-h3"
+                style={{
+                  color: darkTheme ? "var(--white)" : "",
+                }}>
+                Requirements
+              </h3>
               <div className="requirements-description details-description">
                 {reqContents}
               </div>
@@ -83,7 +121,13 @@ const Details = () => {
           </div>
           <div className="position-roles-container">
             <div className="roles-description-container">
-              <h3 className="roles-heading details-h3">What you will do</h3>
+              <h3
+                className="roles-heading details-h3"
+                style={{
+                  color: darkTheme ? "var(--white)" : "",
+                }}>
+                What you will do
+              </h3>
               <div className="roles-description details-description">
                 {rolesContents}
               </div>
@@ -96,9 +140,18 @@ const Details = () => {
           </div>
         </div>
       </main>
-      <footer className="details-footer">
+      <footer
+        className="details-footer"
+        style={{
+          background: darkTheme ? "var(--very-dark-blue)" : "",
+        }}>
         <div className="details-footer-position">
-          <p className="position-typo" style={{ marginBottom: "7px" }}>
+          <p
+            className="position-typo"
+            style={{
+              marginBottom: "7px",
+              color: darkTheme ? "var(--white)" : "",
+            }}>
             {position}
           </p>
           <p className="posted-at">So Digital Inc.</p>
