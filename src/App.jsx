@@ -14,16 +14,22 @@ function App() {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch(`http://localhost:8000/`)
+  const getData = (url) => {
+    fetch(url)
       .then((response) => {
         response.json().then((data) => {
           setData(() => data.data);
+          // if (data.length < 11) {
+          //   document.querySelector(".cards-container").style.height = "auto";
+          // }
         });
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+  useEffect(() => {
+    getData(`http://localhost:8000/`);
   }, []);
   return (
     <BrowserRouter>
@@ -37,7 +43,11 @@ function App() {
             index
             element={
               <Home>
-                <Navbar darkTheme={darkTheme} />
+                <Navbar
+                  darkTheme={darkTheme}
+                  setData={setData}
+                  getData={getData}
+                />
                 <Main>
                   <Cards data={data} darkTheme={darkTheme} />
                 </Main>

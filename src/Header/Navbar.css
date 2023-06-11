@@ -110,9 +110,6 @@
 
   .filter-button {
     position: absolute;
-    /* width: fit-content; */
-    /* height: auto; */
-    /* background: red; */
     left: 950px;
   }
   /* main contents style section */
@@ -147,7 +144,6 @@
   }
   .main-apply-now-btn-container {
     right: 0%;
-    /* top: 25px; */
     top: calc(50% - 28px / 2 - 3px);
   }
   .details-position {
