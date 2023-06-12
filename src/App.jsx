@@ -19,9 +19,6 @@ function App() {
       .then((response) => {
         response.json().then((data) => {
           setData(() => data.data);
-          // if (data.length < 11) {
-          //   document.querySelector(".cards-container").style.height = "auto";
-          // }
         });
       })
       .catch((err) => {
@@ -48,7 +45,7 @@ function App() {
                   setData={setData}
                   getData={getData}
                 />
-                <Main>
+                <Main data={data}>
                   <Cards data={data} darkTheme={darkTheme} />
                 </Main>
               </Home>

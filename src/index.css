@@ -29,6 +29,10 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background: var(--light-grey);
 }
+.no-data-msg {
+  display: flex;
+  justify-content: center;
+}
 body.modal-open {
   overflow: hidden;
   position: fixed;

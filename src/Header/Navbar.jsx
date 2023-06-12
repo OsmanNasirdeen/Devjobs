@@ -38,7 +38,7 @@ const Navbar = ({ darkTheme, getData }) => {
       (!jobLocation || jobLocation.trim().length === 0) &&
       !contractChecked
     ) {
-      return alert("provide details to filter for !!!");
+      return alert("provide details to search for !!!");
     }
     // filter for location only
     if (
@@ -202,7 +202,9 @@ const Navbar = ({ darkTheme, getData }) => {
                 type="submit"
                 className="button-violet"
                 style={FilterActive ? { width: "100%", height: "100%" } : {}}
-                onClick={(e) => filterData(e)}>
+                onClick={(e) => {
+                  filterData(e);
+                }}>
                 Search
               </button>
             </div>
