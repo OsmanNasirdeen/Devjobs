@@ -6,8 +6,6 @@
 @media screen and (min-width: 768px) and (max-width: 1021px) {
   body {
     position: relative;
-    /* height: 2128px; */
-    /* width: 768px; */
     left: 0px;
     top: 0px;
     overflow-x: hidden;
@@ -58,7 +56,6 @@
     column-gap: 16px;
     position: absolute;
     width: 147px;
-    /* background: green; */
     height: 24px;
     left: 40px;
   }
@@ -96,16 +93,13 @@
     position: absolute;
     column-gap: 16px;
     width: 169px;
-    /* background: yellow; */
     height: 24px;
     left: 266px;
   }
   .filter-fullTime-container {
     width: 108px;
-    /* background: orange; */
     height: 24px;
     left: 476px;
-    /* left: 496px; */
   }
   .full-time-checkbox {
     margin-right: 16px;
@@ -135,7 +129,6 @@
     transform: translate(-50%, 0%);
     top: 245px;
     width: 700px;
-    /* background-color: red; */
   }
   .cards-container {
     height: 1698px;
@@ -173,7 +166,6 @@
   }
   .main-apply-now-btn-container {
     right: 0%;
-    /* top: 25px; */
     top: calc(50% - 28px / 2 - 3px);
   }
   .details-position-info-container {
@@ -213,7 +205,3 @@
     top: 25px;
   }
 }
-/* 
-
-
- */

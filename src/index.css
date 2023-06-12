@@ -153,7 +153,6 @@ body.modal-open {
   background-image: url("../assets/desktop/icon-check.svg");
   background-repeat: no-repeat;
   background-position: center;
-  /* color: white; */
 }
 img {
   max-width: 100%;
@@ -225,23 +224,15 @@ img {
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 65px;
-  /* position: relative; */
   width: 100%;
   height: 1132px;
   overflow: hidden;
-  /* left: 165px; */
   padding-top: 2%;
-  /* left: 0px; */
-  /* top: 2%; */
 }
 .load-more-btn-container {
   height: 48px;
   width: 141px;
   margin: 56px auto;
-  /* position: relative; */
-  /* top: 1468px; */
-  /* left: 649px; */
-  /* bottom: 0px; */
 }
 
 .card {
@@ -274,8 +265,6 @@ img {
 .posted-at {
   position: relative;
   height: 16px;
-  /* width: 51px; */
-  /* right: 82.17%; */
   font-weight: var(--fw-regular);
   font-size: var(--fs-16);
   line-height: 20px;
@@ -292,10 +281,8 @@ img {
 }
 .contract {
   position: relative;
-  /* background: red; */
   left: 24px;
   height: 16px;
-  /* width: 98px; */
   width: 72px;
   font-weight: 400;
   font-size: 16px;
@@ -305,7 +292,6 @@ img {
 .position {
   position: absolute;
   width: 100%;
-  /* width: 261px; */
   height: 20px;
   left: 32px;
   top: calc(50% - 25px / 2 - 29px);
@@ -335,7 +321,6 @@ a {
   width: auto;
   height: 20px;
   left: 32px;
-  /* right: 85%; */
   top: calc(50% - 20px / 2 + 5.5px);
   font-family: var(--font-family);
   font-weight: var(--fw-regular);
@@ -471,8 +456,6 @@ input[type="text"]:valid {
   position: absolute;
   width: 78px;
   height: 56px;
-
-  /* background: green; */
 }
 
 .details-company-name {

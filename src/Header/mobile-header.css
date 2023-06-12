@@ -3,12 +3,10 @@
     position: relative;
     max-width: 100%;
     overflow-x: hidden;
-    /* width: 375px; */
   }
   .Navbar-header {
     position: absolute;
     width: 100%;
-    /* width: 375px; */
     height: 136px;
     left: 0px;
     top: 0px;
@@ -25,7 +23,6 @@
   }
   .theme-toggle-container {
     left: 73%;
-    /* left: 270px; */
     top: 36px;
   }
   .icon-moon {
@@ -50,15 +47,12 @@
     top: 96px;
   }
   .filter-search-container {
-    /* column-gap: 16px; */
     justify-content: space-evenly;
     flex-direction: row-reverse;
     position: absolute;
     width: 327px;
-    /* background: green; */
     height: 80px;
     left: 24px;
-    /* top: 96px; */
   }
   .filter-search-container > input {
     position: absolute;
@@ -77,14 +71,12 @@
     left: -50px;
     top: 48px;
     z-index: 10;
-    /* top: 297px; */
   }
 
   .icon-filter {
     display: block;
     position: absolute;
     left: 195px;
-    /* left: 219px; */
     top: 30px;
     width: 20px;
     height: 20px;
@@ -97,7 +89,6 @@
     width: 48px;
     height: 48px;
     left: 233px;
-    /* left: 263px; */
     top: 16px;
     background: var(--violet);
   }
@@ -121,7 +112,6 @@
     height: 24px;
     left: 24px;
     top: 240px;
-    /* top: 322px; */
   }
   .full-time-checkbox {
     position: absolute;
@@ -134,7 +124,6 @@
     width: 110px;
     height: 20px;
     left: 40px;
-    /* top: 3px; */
     line-height: 20px;
   }
   .filter-button {
@@ -152,12 +141,9 @@
     transform: translate(-50%, 0%);
     top: 208px;
     width: 327px;
-    /* background-color: red; */
   }
   .cards-container {
-    /* top: 225px; */
     height: 3300px;
-    /* left: 5%; */
     grid-template-columns: repeat(1, 327px);
     grid-row-gap: 49px;
     padding-top: 10%;
@@ -179,9 +165,7 @@
   .details-company-logo {
     width: 50px;
     height: 50px;
-    /* right: 139px; */
     left: calc(50% - 25px);
-    /* left: 42.5%; */
     top: -10%;
     border-radius: 15px;
   }
@@ -189,7 +173,6 @@
     position: relative;
     height: 52px;
     top: 49px;
-    /* left: 136px;/ */
     left: calc(40%);
   }
   .details-company-name {
