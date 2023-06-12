@@ -1,5 +1,4 @@
 import React from "react";
-// import Cards from "../cards/cards";
 
 // {children} renders Cards component
 const Main = ({ children, data }) => {

@@ -19,7 +19,6 @@ const filterLocation = {
   height: "24px",
   left: "24px",
   top: "155px",
-  //   top: "249px",
   zIndex: 10,
 };
 const filterFullTime = {
