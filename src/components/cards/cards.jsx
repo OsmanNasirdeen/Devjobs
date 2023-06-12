@@ -2,7 +2,9 @@ import React from "react";
 import Card from "./card";
 const Cards = ({ data, darkTheme }) => {
   return (
-    <div className="cards-container">
+    <div
+      className="cards-container"
+      style={{ height: data.length < 11 ? "auto" : "" }}>
       {data.map((job) => {
         const {
           id,

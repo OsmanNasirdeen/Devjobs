@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import locationIcon from "../components/cards/assets/desktop/icon-location.svg";
 import searchIcon from "../components/cards/assets/desktop/icon-search.svg";
 import filterIcon from "../components/cards/assets/mobile/icon-filter.svg";
@@ -9,7 +9,7 @@ import "./Navbar.css";
 import { darkThemeStyles } from "./features/darkThemeStyles";
 // modal for mobile styles
 import { styles } from "./features/modalstyles";
-const Navbar = ({ darkTheme }) => {
+const Navbar = ({ darkTheme, getData }) => {
   const titlePlaceholderDesktop = "Filter by title, companies, expertise...";
   const titlePlaceholderTablet = "Filter by title...";
   const deviceSize = useRef(window.innerWidth);
@@ -19,6 +19,92 @@ const Navbar = ({ darkTheme }) => {
     setFilterActive(() => !FilterActive);
     document.body.classList.toggle("modal-open");
   };
+
+  const filterData = (e) => {
+    // hides modal overlay and modal on mobile
+    if (deviceSize.current < 767) {
+      displayFilter();
+    }
+    e.preventDefault();
+    const jobTitle = document.querySelector(".job-title").value;
+    const jobLocation = document.querySelector(".job-location").value;
+    const contractChecked = document.querySelector(
+      ".full-time-checkbox"
+    ).checked;
+
+    // ensures search fields to filter for are not empty/undefined
+    if (
+      (!jobTitle || jobTitle.trim().length === 0) &&
+      (!jobLocation || jobLocation.trim().length === 0) &&
+      !contractChecked
+    ) {
+      return alert("provide details to search for !!!");
+    }
+    // filter for location only
+    if (
+      (!jobTitle || jobTitle.trim().length === 0) &&
+      jobLocation &&
+      !contractChecked
+    ) {
+      return getData(`http://localhost:8000/locations/${jobLocation.trim()}`);
+    }
+    // filter for location and full time
+    if (
+      (!jobTitle || jobTitle.trim().length === 0) &&
+      jobLocation &&
+      contractChecked
+    ) {
+      return getData(
+        `http://localhost:8000/positions?location=${jobLocation.trim()}&contract=full time`
+      );
+    }
+
+    // filter for title only
+    if (
+      jobTitle &&
+      (!jobLocation || jobLocation.trim().length === 0) &&
+      !contractChecked
+    ) {
+      return getData(`http://localhost:8000/category/${jobTitle.trim()}`);
+    }
+
+    // filter for title and full time
+    if (
+      jobTitle &&
+      (!jobLocation || jobLocation.trim().length === 0) &&
+      contractChecked
+    ) {
+      return getData(
+        `http://localhost:8000/positions?position=${jobTitle.trim()}&contract=full time`
+      );
+    }
+    // filter for only full time
+    if (
+      (!jobTitle || jobTitle.trim().length === 0) &&
+      (!jobLocation || jobLocation.trim().length === 0) &&
+      contractChecked
+    ) {
+      return getData(`http://localhost:8000/contracts/full time`);
+    }
+    // filter title,location and full time
+    if (jobTitle && jobLocation.trim().length !== 0 && contractChecked) {
+      return getData(
+        `http://localhost:8000/positions?position=${jobTitle.trim()}&location=${jobLocation.trim()}&contract=full time`
+      );
+    }
+    // filter for title,location
+    if (jobTitle && jobLocation.trim().length !== 0 && !contractChecked) {
+      return getData(
+        `http://localhost:8000/positions?position=${jobTitle.trim()}&location=${jobLocation.trim()}`
+      );
+    }
+  };
+  const filterPOsitionMobile = () => {
+    const jobTitle = document.querySelector(".job-title").value;
+    if (jobTitle || jobTitle.trim().length !== 0) {
+      return getData(`http://localhost:8000/category/${jobTitle.trim()}`);
+    }
+  };
   return (
     <>
       <div className="navbar">
@@ -27,7 +113,16 @@ const Navbar = ({ darkTheme }) => {
           style={{ background: darkTheme ? "var(--very-dark-blue)" : "" }}>
           <form action="" className="filter-form">
             <div className="filter-search-container">
-              <label for="title" className="icon-search-label">
+              <label
+                for="title"
+                className="icon-search-label"
+                onClick={
+                  deviceSize.current < 767
+                    ? () => {
+                        filterPOsitionMobile();
+                      }
+                    : ""
+                }>
                 <img
                   src={searchIcon}
                   alt="icon-search"
@@ -36,6 +131,7 @@ const Navbar = ({ darkTheme }) => {
               </label>
               <input
                 type="text"
+                className="job-title"
                 id="title"
                 placeholder={
                   deviceSize.current > 996
@@ -71,6 +167,7 @@ const Navbar = ({ darkTheme }) => {
               </label>
               <input
                 type="text"
+                className="job-location"
                 id="location"
                 placeholder="Filter by location"
                 required
@@ -104,7 +201,10 @@ const Navbar = ({ darkTheme }) => {
               <button
                 type="submit"
                 className="button-violet"
-                style={FilterActive ? { width: "100%", height: "100%" } : {}}>
+                style={FilterActive ? { width: "100%", height: "100%" } : {}}
+                onClick={(e) => {
+                  filterData(e);
+                }}>
                 Search
               </button>
             </div>

@@ -14,8 +14,8 @@ function App() {
 
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch(`http://localhost:8000/`)
+  const getData = (url) => {
+    fetch(url)
       .then((response) => {
         response.json().then((data) => {
           setData(() => data.data);
@@ -24,6 +24,9 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
+  };
+  useEffect(() => {
+    getData(`http://localhost:8000/`);
   }, []);
   return (
     <BrowserRouter>
@@ -37,8 +40,12 @@ function App() {
             index
             element={
               <Home>
-                <Navbar darkTheme={darkTheme} />
-                <Main>
+                <Navbar
+                  darkTheme={darkTheme}
+                  setData={setData}
+                  getData={getData}
+                />
+                <Main data={data}>
                   <Cards data={data} darkTheme={darkTheme} />
                 </Main>
               </Home>
