@@ -26,7 +26,7 @@ function App() {
       });
   };
   useEffect(() => {
-    getData(`http://localhost:8000/`);
+    getData(`https://server-devjobs.onrender.com/`);
   }, []);
   return (
     <BrowserRouter>

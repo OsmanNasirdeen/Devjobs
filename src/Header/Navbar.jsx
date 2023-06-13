@@ -46,7 +46,9 @@ const Navbar = ({ darkTheme, getData }) => {
       jobLocation &&
       !contractChecked
     ) {
-      return getData(`http://localhost:8000/locations/${jobLocation.trim()}`);
+      return getData(
+        `https://server-devjobs.onrender.com/locations/${jobLocation.trim()}`
+      );
     }
     // filter for location and full time
     if (
@@ -55,7 +57,7 @@ const Navbar = ({ darkTheme, getData }) => {
       contractChecked
     ) {
       return getData(
-        `http://localhost:8000/positions?location=${jobLocation.trim()}&contract=full time`
+        `https://server-devjobs.onrender.com/positions?location=${jobLocation.trim()}&contract=full time`
       );
     }
 
@@ -65,7 +67,9 @@ const Navbar = ({ darkTheme, getData }) => {
       (!jobLocation || jobLocation.trim().length === 0) &&
       !contractChecked
     ) {
-      return getData(`http://localhost:8000/category/${jobTitle.trim()}`);
+      return getData(
+        `https://server-devjobs.onrender.com/category/${jobTitle.trim()}`
+      );
     }
 
     // filter for title and full time
@@ -75,7 +79,7 @@ const Navbar = ({ darkTheme, getData }) => {
       contractChecked
     ) {
       return getData(
-        `http://localhost:8000/positions?position=${jobTitle.trim()}&contract=full time`
+        `https://server-devjobs.onrender.com/positions?position=${jobTitle.trim()}&contract=full time`
       );
     }
     // filter for only full time
@@ -84,25 +88,27 @@ const Navbar = ({ darkTheme, getData }) => {
       (!jobLocation || jobLocation.trim().length === 0) &&
       contractChecked
     ) {
-      return getData(`http://localhost:8000/contracts/full time`);
+      return getData(`https://server-devjobs.onrender.com/contracts/full time`);
     }
     // filter title,location and full time
     if (jobTitle && jobLocation.trim().length !== 0 && contractChecked) {
       return getData(
-        `http://localhost:8000/positions?position=${jobTitle.trim()}&location=${jobLocation.trim()}&contract=full time`
+        `https://server-devjobs.onrender.com/positions?position=${jobTitle.trim()}&location=${jobLocation.trim()}&contract=full time`
       );
     }
     // filter for title,location
     if (jobTitle && jobLocation.trim().length !== 0 && !contractChecked) {
       return getData(
-        `http://localhost:8000/positions?position=${jobTitle.trim()}&location=${jobLocation.trim()}`
+        `https://server-devjobs.onrender.com/positions?position=${jobTitle.trim()}&location=${jobLocation.trim()}`
       );
     }
   };
   const filterPOsitionMobile = () => {
     const jobTitle = document.querySelector(".job-title").value;
     if (jobTitle || jobTitle.trim().length !== 0) {
-      return getData(`http://localhost:8000/category/${jobTitle.trim()}`);
+      return getData(
+        `https://server-devjobs.onrender.com/category/${jobTitle.trim()}`
+      );
     }
   };
   return (
