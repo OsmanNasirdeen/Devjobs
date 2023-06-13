@@ -36,7 +36,7 @@ const Details = ({ darkTheme }) => {
           <div
             className="details-company-logo"
             style={{ background: logoBackground }}>
-            <img src={`${logo}`} alt="" />
+            <img src={`.${logo}`} alt="" />
           </div>
           <div className="details-companyNameSite-container">
             <p
