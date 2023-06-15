@@ -159,7 +159,7 @@ const certainCategoryData = fetch(
 
 ---
 
-### ` (1) This will return an array of all data whose location is Ghana from The server`;
+#### ` (1) This will return an array of all data whose location is Ghana from The server`;
 
 ```javascript
 const locationName = "Ghana";
