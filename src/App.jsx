@@ -12,18 +12,25 @@ function App() {
   // theme toggle state
   const [darkTheme, setDarkTheme] = useState(false);
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const [data, setData] = useState([]);
 
   const getData = (url) => {
+    setIsLoading(true);
+    document.querySelector(".modal-overlay").style.display = "block";
     fetch(url)
       .then((response) => {
         response.json().then((data) => {
           setData(() => data.data);
+          setIsLoading(() => false);
+          document.querySelector(".modal-overlay").style.display = "none";
         });
       })
       .catch((err) => {
         console.log(err);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
   useEffect(() => {
     getData(`https://server-devjobs.onrender.com/`);
@@ -39,13 +46,13 @@ function App() {
           <Route
             index
             element={
-              <Home>
+              <Home isLoading={isLoading}>
                 <Navbar
                   darkTheme={darkTheme}
                   setData={setData}
                   getData={getData}
                 />
-                <Main data={data}>
+                <Main data={data} isLoading={isLoading}>
                   <Cards data={data} darkTheme={darkTheme} />
                 </Main>
               </Home>

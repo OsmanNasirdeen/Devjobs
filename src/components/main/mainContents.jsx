@@ -1,7 +1,7 @@
 import React from "react";
 
 // {children} renders Cards component
-const Main = ({ children, data }) => {
+const Main = ({ children, data, isLoading }) => {
   const loadMoreCards = () => {
     const cardsContainer = document.querySelector(".cards-container");
     const loadMoreBtn = document.querySelector(".load-more-btn-container");
@@ -13,7 +13,9 @@ const Main = ({ children, data }) => {
       {data.length > 0 ? (
         children
       ) : (
-        <div className="no-data-msg">
+        <div
+          className="no-data-msg"
+          style={{ display: isLoading ? "none" : "" }}>
           <h1>No Data Found !!!</h1>
         </div>
       )}

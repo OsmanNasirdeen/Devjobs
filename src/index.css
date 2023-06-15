@@ -29,6 +29,27 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   background: var(--light-grey);
 }
+.spinner {
+  position: fixed;
+  top: 40%;
+  left: 35%;
+  z-index: 1000;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--violet);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .no-data-msg {
   display: flex;
   justify-content: center;
