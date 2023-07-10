@@ -9,6 +9,7 @@ import "./Navbar.css";
 import { darkThemeStyles } from "./features/darkThemeStyles";
 // modal for mobile styles
 import { styles } from "./features/modalstyles";
+import { controls } from "../controllers/controllers";
 const Navbar = ({ darkTheme, getData }) => {
   const titlePlaceholderDesktop = "Filter by title, companies, expertise...";
   const titlePlaceholderTablet = "Filter by title...";
@@ -222,7 +223,8 @@ const Navbar = ({ darkTheme, getData }) => {
         style={darkTheme ? { background: "var(--very-dark-blue)" } : {}}></div>
       <div
         className="modal-overlay"
-        style={FilterActive ? styles.modalOverlay : {}}></div>
+        style={FilterActive ? styles.modalOverlay : {}}
+        onClick={() => controls.hideModal(displayFilter)}></div>
     </>
   );
 };

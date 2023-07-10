@@ -1,6 +1,7 @@
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import ScrollToTop from "./Header/scrollToTop";
 import Home from "./components/Homepage/Home";
 import Navbar from "./Header/Navbar";
 import Main from "./components/main/mainContents";
@@ -37,6 +38,7 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -52,7 +54,7 @@ function App() {
                   setData={setData}
                   getData={getData}
                 />
-                <Main data={data} isLoading={isLoading}>
+                <Main data={data} isLoading={isLoading} darkTheme={darkTheme}>
                   <Cards data={data} darkTheme={darkTheme} />
                 </Main>
               </Home>
