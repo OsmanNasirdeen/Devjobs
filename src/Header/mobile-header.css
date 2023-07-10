@@ -84,6 +84,10 @@
     background: var(--white);
     cursor: pointer;
   }
+  .spinner {
+    width: 65px;
+    height: 65px;
+  }
   .filter-search-container > label {
     position: absolute;
     width: 48px;
